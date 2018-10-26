@@ -1,0 +1,25 @@
+platform="liunx"
+skynetroot= "./skynet/"
+
+luaservice = skynetroot.."service/?.lua;"
+			..skynetroot.."test/?.lua;"
+			..skynetroot.."examples/?.lua;"
+			..skynetroot.."test/?/init.lua"
+			
+lualoader = skynetroot .. "lualib/loader.lua"
+
+lua_path = skynetroot.."lualib/?.lua;"
+			..skynetroot.."lualib/?/init.lua;"
+			..skynetroot.."examples/?.lua;"
+			..skynetroot.."test/?.lua;"
+			..skynetroot.."test/?/init.lua"
+
+if platform == "win32" then
+	lua_cpath = skynetroot.."bin/win32/luaclib/?.so;"
+	cpath = "./skynet/bin/win32/cservice/?.so"
+else
+	lua_cpath = skynetroot.."bin/liunx/luaclib/?.so;"
+	cpath = "./skynet/bin/liunx/cservice/?.so"
+end
+snax = skynetroot.."examples/?.lua;"..skynetroot.."test/?.lua"
+

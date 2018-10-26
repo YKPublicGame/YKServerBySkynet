@@ -1,0 +1,46 @@
+platform="liunx"
+skynetroot= "./skynet/"
+ykRoot = "./ykserver/"
+thread = 8
+harbor = 0
+start = "main"	-- main script
+bootstrap = "snlua bootstrap"	-- The service for bootstrap
+
+luaservice = skynetroot.."service/?.lua;"
+             ..ykRoot.."service/?.lua;"
+
+lua_path = skynetroot.."lualib/?.lua;"
+            ..skynetroot.."service/?.lua;"
+            ..skynetroot.."lualib/?/init.lua;"
+            ..ykRoot.."lualib/?.lua;"
+            ..ykRoot.."global/?.lua;"
+            ..ykRoot.."service/?.lua;"
+
+if platform == "win32" then
+	lua_cpath   = skynetroot.."bin/win32/luaclib/?.so;"
+	cpath       = skynetroot.."bin/win32/cservice/?.so"
+else
+	lua_cpath = skynetroot.."bin/liunx/luaclib/?.so;"
+    	cpath = skynetroot.."bin/liunx/cservice/?.so"
+end
+lualoader = skynetroot .. "lualib/loader.lua"
+preload         = ykRoot .. "global/preload.lua"
+
+logpath         = "./log/"
+
+--中心服務器名稱
+centerServerName = "center"
+
+--检查服务器集群心跳超时时间
+checkS2STimeOut = 3
+
+heartbeatInterval    = 5   --心跳检查时间间隔
+offlineInterval      = 20  --超时断开连接间隔
+
+server_version = "201710061525"
+
+---中心服務器ip地址
+centernode = "127.0.0.1:9000"
+
+dump_level = 10
+

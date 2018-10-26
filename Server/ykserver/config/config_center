@@ -1,0 +1,20 @@
+---------------------------public-----------------------
+include("config_public")
+---------------------------------------------------------
+
+logger = logpath.."center.log"
+logfile    = "center.log"
+debugPort  = 7000
+luaservice = luaservice .. ykRoot.."sercenter/?.lua;"
+--lua_path = lua_path .. ykRoot.."sercenter/?.lua;"
+
+-- 集群名称配置文件
+nodename    = "center"
+nodeport    = 9000
+nodeip      = "127.0.0.1"
+servertype  = "center"
+serverid    = 1
+
+--[[
+  外部网络的连接配置watchdog
+]]

@@ -1,0 +1,19 @@
+[:00000001] LAUNCH logger ./log/center.log
+[:00000002] LAUNCH snlua bootstrap
+[:00000003] LAUNCH snlua launcher
+[:00000004] LAUNCH snlua cdummy
+[:00000005] LAUNCH harbor 0 4
+[:00000006] LAUNCH snlua datacenterd
+[:00000007] LAUNCH snlua service_mgr
+[:00000008] LAUNCH snlua main
+[:00000008] ------debug_console----------
+[:00000009] LAUNCH snlua debug_console 7000
+[:00000009] Start debug console at 127.0.0.1:7000
+[:0000000a] LAUNCH snlua server_log
+[:0000000b] LAUNCH snlua NodeMonitord
+[:0000000c] LAUNCH snlua clusterd
+[:0000000d] LAUNCH snlua gate
+[:0000000d] Listen on 0.0.0.0:9000
+[:00000008] centerserver start!
+[:00000008] KILL self
+[:00000002] KILL self

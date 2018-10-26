@@ -1,0 +1,12 @@
+include "config.path"
+
+-- preload = ".examples/preload.lua"	-- run preload.lua before every lua service run
+thread = 8
+logger = nil
+logpath = "."
+harbor = 0
+--master = "127.0.0.1:2013"
+--standalone = "0.0.0.0:2013"
+start = "main"	-- main script
+bootstrap = "snlua bootstrap"	-- The service for bootstrap
+snax = skynetroot.."examples/?.lua;"..skynetroot.."test/?.lua"

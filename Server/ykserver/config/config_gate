@@ -1,0 +1,35 @@
+---------------------------public-----------------------
+include("config_public")
+---------------------------------------------------------
+
+logger = logpath.."gate.log"
+logfile    = "gate.log"
+debugPort  = 7002
+luaservice = luaservice
+            ..ykRoot .."sergate/?/main.lua;"
+            .. ykRoot.."sergate/?.lua;"
+            .. ykRoot.."sergate/httpser/?/main.lua;"
+            .. ykRoot.."sergate/dbserver/?.lua;"
+
+lua_path = lua_path ..ykRoot.."sergate/dbserver/?.lua;"
+            ..ykRoot.."sergate/httpser/?.lua;"
+
+-- 集群名称配置文件
+nodename    = "gate"
+nodeport    = 9001
+nodeip      = "127.0.0.1"
+serverid    = 2
+servertype  = "gate"
+serverindex = 1
+isbackup    = 0
+
+wsNodelay    = true
+wsListenPort = 9023
+wsMaxClient  = 30000
+
+httpport    = 9100
+
+backupToMysqlTime = 90 --备份数据到数据库的时间单位（秒）
+
+
+

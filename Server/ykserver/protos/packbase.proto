@@ -1,0 +1,39 @@
+
+message test {
+	optional string str = 1;
+
+}
+message packbase {
+	optional int32 cmd = 1;
+	optional int32 msgid = 2;
+	optional int32 errorcode = 3;
+	optional bytes contentBuff = 4;
+
+}
+message UserData {
+	optional int32 roleId = 1;
+	optional string nickName = 2;
+	optional string headUrl = 3;
+	optional int32 sex = 4;
+	optional string signature = 5;
+	optional int32 constellation = 6;
+	optional string county = 7;
+	optional string city = 8;
+	optional string weChat = 9;
+	optional int32 gold = 10;
+	optional int32 diamond = 11;
+
+}
+message loginReq {
+	optional string token = 1;
+	optional int32 roleid = 2;
+
+}
+message loginResp {
+	optional UserData roleinfo = 1;
+
+}
+message tickOutEvent {
+	optional int32 tickType = 1;
+
+}
