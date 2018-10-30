@@ -34,3 +34,5 @@
 }
 return this
   ```
+  
+  然后 运行sh test.sh
