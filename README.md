@@ -1,4 +1,4 @@
-# skynet服务器框架大致
+# skynet服务器框架说明
 
 ## 架构相关
 - mysql 备份数据库 + redis运行时数据库
